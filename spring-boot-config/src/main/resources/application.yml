@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-boot-config
+  profiles:
+    active: test
+  cloud:
+    config:
+      uri:http://localhost:8888
+app:
+  name: My app
+  description: Welcome to ${app.name}
+
+my:
+ greeting: Hello
+ list:
+    values: One, Two, Three
+
+dbValues: "{connectionString: 'http://___', userName: 'foo', password: 'pass'}"
+
+db:
+  connection: "test-connection-string-here"
+  host: 127.0.0.1
+  port: 1200
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
